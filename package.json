@@ -5,8 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "lint": "npx eslint ./realtime-quiz/**/*.vue ."
+    "start": "npm run pre-build && node server.js",
+    "lint": "npx eslint ./realtime-quiz/**/*.vue .",
+    "pre-build": "cd realtime-quiz && npm install && npm run build"
   },
   "repository": {
     "type": "git",
