@@ -3,8 +3,8 @@
     <div v-if="!showQuestions" class="host-home card">
       <div v-if="!isRoomReady" class="card-body">
         <h2 class="card-title">
-          Host
-          {{ quizType === 'CustomQuiz' ? 'your own ' : 'a randomly chosen ' }}
+          Host a
+          <!--  {{ quizType === 'CustomQuiz' ? 'your own ' : 'a randomly chosen ' }} -->
           quiz
         </h2>
         <template v-if="quizType == 'CustomQuiz'"

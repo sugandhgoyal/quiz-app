@@ -45,13 +45,6 @@
         host is no longer online or the quiz has already started.
       </div>
       <div class="card-footer text-muted div-black">
-        <a
-          href="https://github.com/Srushtika/realtime-quiz-framework"
-          class="link"
-          target="_blank"
-          >Learn how to build your own realtime quiz app with Ably &rarr;</a
-        >
-      </div>
     </div>
     <Question
       v-if="showQuestions && !showAnswer"
@@ -129,8 +122,7 @@ export default {
       isRoomClosed: null,
       quizRoomCode: null,
       myQuizRoomCh: null,
-      headerImgLink:
-        'https://user-images.githubusercontent.com/5900152/108396467-c713bc00-720e-11eb-95d8-a5f9e571b153.png',
+      headerImgLink: null,
       myNickname: '',
       myAvatarColor: null,
       didPlayerEnterRoom: false,

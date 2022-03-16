@@ -7,29 +7,22 @@
         </a>
       </div>
       <div class="card-body home-text">
-        <h5 class="card-title">Hello Quizmaster!</h5>
+        <!-- <h5 class="card-title">Hello Quizmaster!</h5> -->
         <p class="card-text">
-          You can use this app to upload your own quiz questions and host a live
-          quiz for any number of participants. As the host, you'll be able to
-          see the live stats at all times and will have full control of the quiz
-          during the live game. You can try it out by hosting a randomly chosen
-          quiz!
         </p>
         <p class="card-text">
-          You can share your screen with the participants while they answer the
-          questions via their mobile browsers for best experience.
         </p>
         <template v-if="!isSmallWidth">
-          <button
+          <!-- <button
             class="btn"
             id="btn-1"
             type="submit"
             @click="setQuizType('CustomQuiz')"
           >
             Create your own quiz
-          </button>
+          </button> -->
           <button class="btn" type="submit" @click="setQuizType('RandomQuiz')">
-            Host a randomly chosen quiz
+            Host a quiz
           </button>
         </template>
         <template v-if="isSmallWidth">
@@ -41,12 +34,6 @@
         </template>
       </div>
       <div class="card-footer text-muted footer-black">
-        <a
-          href="https://github.com/Srushtika/realtime-quiz-framework"
-          target="_blank"
-          class="link"
-          >Learn how to build your own realtime quiz app with Ably &rarr;</a
-        >
       </div>
     </div>
     <template v-if="isTypeChosen">
@@ -69,8 +56,7 @@ export default {
   data() {
     return {
       isTypeChosen: false,
-      headerImgLink:
-        'https://user-images.githubusercontent.com/5900152/108396467-c713bc00-720e-11eb-95d8-a5f9e571b153.png',
+      headerImgLink: null,
       quizType: '',
       windowWidth: window.innerWidth
     };
